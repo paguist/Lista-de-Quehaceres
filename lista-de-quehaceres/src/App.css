@@ -1,0 +1,111 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor principal centrado */
+.task-container {
+  width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  background-color: #362f2f;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Elementos de la lista de tareas */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #362f2f;
+  border-radius: 4px;
+  background-color: #362f2f;
+}
+
+.task-text {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+}
+
+.task-actions button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Botón de eliminar */
+.task-actions .delete-button {
+  background-color: black;
+  color: white;
+}
+
+.task-actions .delete-button:hover {
+  background-color: #333;
+}
+
+/* Botón de añadir */
+button.add-button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: blue;
+  color: white;
+}
+
+button.add-button:hover {
+  background-color: darkblue;
+}
+
+/* Input de texto */
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #000000;
+  width: calc(100% - 110px);
+}
+
+/* Estilos checkbox */
+.task-actions input[type="checkbox"] {
+  display: none;
+}
+
+.task-actions input[type="checkbox"] + label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  border: 2px solid #000;
+  position: relative;
+  cursor: pointer;
+}
+
+.task-actions input[type="checkbox"]:checked + label {
+  background-color: hsl(0, 0%, 100%);
+  border-color: #121212;
+}
+
+.task-actions input[type="checkbox"]:checked + label::after {
+  content: '✔';
+  color: #0d0d0d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
